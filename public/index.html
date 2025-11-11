@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Agenda de Contactos</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;padding:20px}
+      .contact{border:1px solid #ddd;padding:10px;margin:10px 0;display:flex;gap:10px;align-items:center}
+      img.photo{width:80px;height:80px;object-fit:cover;border-radius:6px}
+      form{margin-bottom:20px}
+      label{display:block;margin:6px 0}
+    </style>
+  </head>
+  <body>
+    <h1>Agenda de Contactos</h1>
+
+    <form id="form">
+      <input type="hidden" name="id" />
+      <label>Nombre: <input name="nombre" required /></label>
+      <label>Apellidos: <input name="apellidos" required /></label>
+      <label>Correo: <input name="correo" type="email" /></label>
+      <label>Fecha Nac: <input name="fecha_nac" type="date" /></label>
+      <label>Foto: <input name="foto" type="file" accept="image/*" /></label>
+      <button type="submit">Guardar</button>
+      <button type="button" id="reset">Nuevo</button>
+    </form>
+
+    <div>
+      <input id="search" placeholder="Buscar por apellido" />
+      <button id="btnSearch">Buscar</button>
+      <button id="btnList">Listar todos</button>
+    </div>
+
+    <div id="list"></div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

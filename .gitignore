@@ -1,0 +1,7 @@
+node_modules/
+.env
+/.env.local
+npm-debug.log
+dist/
+README.md
+DEPLOYMENT_GUIDE.md
