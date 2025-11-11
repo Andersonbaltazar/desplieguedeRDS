@@ -16,8 +16,7 @@ async function uploadFile(buffer, key, contentType) {
     Bucket: BUCKET,
     Key: key,
     Body: buffer,
-    ContentType: contentType,
-    ACL: 'public-read'
+    ContentType: contentType
   };
 
   const cmd = new PutObjectCommand(params);
